@@ -2,6 +2,7 @@ package sg.edu.nus.iss;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Hello world!
@@ -30,5 +31,9 @@ public class App
         else {
             System.out.println("File exists.");
         }
+
+        CSVWriter csvWriter = new CSVWriter();
+        List<Employee> employeeList = csvWriter.generateEmployees();
+        csvWriter.writeToCSV(employeeList, dirPathFileName);
     }
 }

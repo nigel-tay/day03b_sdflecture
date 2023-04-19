@@ -34,7 +34,7 @@ public class CSVWriter {
 
         // Write FILE_HEADER into specified file
         BufferedWriter bw = new BufferedWriter(fileWriter);
-        bw.append(FILE_HEADER); // Appends eadch individual character in the string
+        bw.append(FILE_HEADER + "\n"); // Appends eadch individual character in the string
         
         // Iterate through employees to write each employee record to file
         for (Employee individuaEmployee: employees) {
