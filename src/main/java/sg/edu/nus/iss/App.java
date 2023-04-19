@@ -35,5 +35,9 @@ public class App
         CSVWriter csvWriter = new CSVWriter();
         List<Employee> employeeList = csvWriter.generateEmployees();
         csvWriter.writeToCSV(employeeList, dirPathFileName);
+
+        CSVReader csvReader = new CSVReader();
+        List<Employee> retrievedList = csvReader.readCSV(dirPathFileName);
+        System.out.println(retrievedList.toString());
     }
 }
